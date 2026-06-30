@@ -3,24 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <style>
+        /* 도화지 자체를 120px 절대 크기로 고정 */
         html, body { 
             margin: 0 !important; 
             padding: 0 !important; 
             background-color: #131722 !important; 
             overflow: hidden !important; 
             width: 100%; 
-            height: 100%; 
+            height: 120px !important; 
         }
+        /* 위젯 컨테이너도 120px로 확장하고 내부 정중앙 정렬 */
         .tradingview-widget-container {
             width: 100% !important;
-            height: 100% !important;
+            height: 120px !important;
             background-color: #131722 !important;
+            display: flex !important;
+            align-items: center !important; /* 세로 기준 정중앙 배치 */
+            justify-content: center !important;
         }
-        /* 카피라이트 텍스트 완벽 차단 */
+        /* 트레이딩뷰 위젯 자체 크기도 120px로 일치 */
+        .tradingview-widget-container__widget {
+            width: 100% !important;
+            height: 120px !important;
+        }
+        /* 카피라이트 텍스트 차단 */
         .tradingview-widget-copyright {
             display: none !important;
             visibility: hidden !important;
-            height: 0 !important;
         }
     </style>
 </head>
@@ -41,7 +50,7 @@
         "displayMode": "adaptive",
         "locale": "ko",
         "width": "100%",
-        "height": 80
+        "height": 120
         }
         </script>
     </div>
