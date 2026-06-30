@@ -15,6 +15,14 @@
             width: 100% !important;
             height: 100% !important;
         }
+        /* 트레이딩뷰 하단 라벨 강제 제거 */
+        .tradingview-widget-copyright {
+            display: none !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
     </style>
 </head>
 <body>
@@ -29,7 +37,7 @@
             { "proName": "AMEX:KORU", "title": "MSCI Korea" }
         ],
         "colorTheme": "dark",
-        "isTransparent": false,
+        "isTransparent": true,
         "showSymbolLogo": true,
         "locale": "ko"
         }
