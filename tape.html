@@ -12,22 +12,26 @@
             height: 100%; 
         }
         .tradingview-widget-container {
+            position: relative;
             width: 100% !important;
             height: 100% !important;
             background-color: #131722 !important;
+            overflow: hidden !important;
         }
-        /* 내부 하단 영역을 배경색과 완전히 일치시켜 강제 덮어쓰기 */
+        /* 위젯 자체를 위로 살짝 끌어올려 하단 남색 영역을 화면 밖으로 밀어내기 */
+        .tradingview-widget-container div {
+            margin-top: -2px !important;
+        }
         .tradingview-widget-copyright {
             display: none !important;
             visibility: hidden !important;
-            background-color: #131722 !important;
         }
     </style>
 </head>
 <body>
     <div class="tradingview-widget-container">
         <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
-        <tv-ticker-tape symbols="FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FX_IDC:USDKRW,AMEX:KORU" theme="dark" is-transparent="true" locale="ko"></tv-ticker-tape>
+        <tv-ticker-tape symbols="FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FX_IDC:USDKRW,AMEX:KORU" theme="dark" locale="ko"></tv-ticker-tape>
     </div>
 </body>
 </html>
