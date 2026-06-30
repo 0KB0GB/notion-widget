@@ -11,10 +11,20 @@
             width: 100%; 
             height: 100%; 
         }
+        /* 트레이딩뷰 하단 라벨 강제 제거 */
+        .tradingview-widget-copyright {
+            display: none !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
     </style>
 </head>
 <body>
-    <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
-    <tv-ticker-tape symbols="FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FX_IDC:USDKRW,AMEX:KORU" theme="dark" locale="ko"></tv-ticker-tape>
+    <div class="tradingview-widget-container">
+        <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
+        <tv-ticker-tape symbols="FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FX_IDC:USDKRW,AMEX:KORU" theme="dark" locale="ko"></tv-ticker-tape>
+    </div>
 </body>
 </html>
