@@ -12,26 +12,37 @@
             height: 100%; 
         }
         .tradingview-widget-container {
-            position: relative;
             width: 100% !important;
             height: 100% !important;
-            background-color: #131722 !important;
-            overflow: hidden !important;
         }
-        /* 위젯 자체를 위로 살짝 끌어올려 하단 남색 영역을 화면 밖으로 밀어내기 */
-        .tradingview-widget-container div {
-            margin-top: -2px !important;
-        }
+        /* 지수 위젯에서 성공했던 카피라이트 완전 박멸 스타일 */
         .tradingview-widget-copyright {
             display: none !important;
             visibility: hidden !important;
+            height: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
         }
     </style>
 </head>
 <body>
     <div class="tradingview-widget-container">
-        <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
-        <tv-ticker-tape symbols="FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FX_IDC:USDKRW,AMEX:KORU" theme="dark" locale="ko"></tv-ticker-tape>
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        {
+        "symbols": [
+            { "proName": "FOREXCOM:SPXUSD", "title": "S&P 500" },
+            { "proName": "FOREXCOM:NSXUSD", "title": "Nasdaq 100" },
+            { "proName": "FX_IDC:USDKRW", "title": "USD/KRW" },
+            { "proName": "AMEX:KORU", "title": "MSCI Korea" }
+        ],
+        "showSymbolLogo": true,
+        "colorTheme": "dark",
+        "isTransparent": true,
+        "displayMode": "adaptive",
+        "locale": "ko"
+        }
+        </script>
     </div>
 </body>
 </html>
